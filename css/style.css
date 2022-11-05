@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --blue: #668ba4;
+    --white: #fafafa;
+    --alpha: rgba(0, 0, 0, 0.4);
+    --shadow-first: rgba(92, 92, 92, 0.1);
+    --shadow-second: rgba(82, 82, 82, 0.2);
+    --border: #272727;
+    --marked: #fa8333;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+  
+  body {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--blue);
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  
+  .select-title {
+    line-height: 3em;
+    font-weight: 700;
+    color: var(--white);
+  }
+  
+  input[type="file"] {
+    background-color: var(--alpha);
+    border-radius: 2px;
+  }
+  
+  input[name="file"] {
+    text-align: center;
+    padding: 10px;
+    color: var(--white);
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--alpha);
+    border: 2px solid var(--border);
+    box-shadow: -5px -5px 5px var(--shadow-first),
+      10px 10px 10px var(--alpha), inset -5px -5px 5px var(--shadow-second),
+      inset 10px 10px 10px var(--alpha);
+  }
+  
+  .thumbnail {
+    height: 50%;
+    margin-top: 2em;
+    visibility: hidden;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .buttons {
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 40px;
+    background: var(--alpha);
+    border: 2px solid var(--border);
+    box-shadow: -5px -5px 5px var(--shadow-first),
+      10px 10px 10px var(--alpha), inset -5px -5px 5px var(--shadow-second),
+      inset 10px 10px 10px var(--alpha);
+  }
+  
+  .buttons:hover {
+    background: linear-gradient(to bottom, var(--alpha));
+    border: 2px solid var(--border);
+    transition: all 0.3s ease-in;
+  }
+  
+  .button:focus {
+    background: var(--marked);
+    color: var(--white);
+    transition: all 0.3s ease-in;
+  }
+  
+  .bi {
+    font-size: 2em;
+    color: var(--white);
+  }
+  
+  .loading-message {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--marked);
+    border: 2px solid var(--marked);
+    padding: 2em;
+  }
